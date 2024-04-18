@@ -2,10 +2,8 @@ export const users = [
 	{
 		id: 0,
 		name: "John Doe",
-		username: "johndoe",
-		avatar:
-			"https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
-		status: "online",
+		avatar: "https://example.com/avatar1.jpg",
+		occupation: "doctor",
 		messages: [
 			{
 				id: 1,
@@ -30,10 +28,8 @@ export const users = [
 	{
 		id: 1,
 		name: "Jane Smith",
-		username: "janesmith",
-		avatar:
-			"https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
-		status: "offline",
+		avatar: "https://example.com/avatar2.jpg",
+		occupation: "patient",
 		messages: [
 			{
 				id: 1,
@@ -58,9 +54,8 @@ export const users = [
 	{
 		id: 2,
 		name: "Mike Johnson",
-		username: "mikejohnson",
-		avatar: "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
-		status: "offline",
+		avatar: "https://example.com/avatar3.jpg",
+		occupation: "doctor",
 		messages: [
 			{
 				id: 1,
@@ -81,5 +76,75 @@ export const users = [
 				type: "received",
 			},
 		],
-  },
+	},
+	{
+		id: 3,
+		name: "Sarah Johnson",
+		avatar: "https://example.com/avatar4.jpg",
+		occupation: "patient",
+		messages: [
+			{
+				id: 1,
+				content: "Hi, everyone!",
+				timestamp: new Date("2024-04-18T09:00:00"),
+				type: "received",
+			},
+			{
+				id: 2,
+				content: "I have an appointment tomorrow.",
+				timestamp: new Date("2024-04-18T10:30:00"),
+				type: "received",
+			},
+			{
+				id: 3,
+				content: "Looking forward to it!",
+				timestamp: new Date("2024-04-18T14:15:00"),
+				type: "received",
+			},
+		],
+	},
+	{
+		id: 4,
+		name: "David Johnson",
+		avatar: "https://example.com/avatar5.jpg",
+		occupation: "doctor",
+		messages: [],
+	},
+	{
+		id: 5,
+		name: "Emily Smith",
+		avatar: "https://example.com/avatar6.jpg",
+		occupation: "doctor",
+		messages: [],
+	},
+	{
+		id: 6,
+		name: "Michael Brown",
+		avatar: "https://example.com/avatar7.jpg",
+		occupation: "doctor",
+		messages: [],
+	},
+	{
+		id: 7,
+		name: "Jessica Davis",
+		avatar: "https://example.com/avatar8.jpg",
+		occupation: "patient",
+		messages: [],
+	},
+	{
+		id: 8,
+		name: "Daniel Wilson",
+		avatar: "https://example.com/avatar9.jpg",
+		occupation: "patient",
+		messages: [],
+	},
+	{
+		id: 9,
+		name: "Olivia Johnson",
+		avatar: "https://example.com/avatar10.jpg",
+		occupation: "patient",
+		messages: [],
+	},
 ];
+
+export const shownUsers:number[] = [0,1,2,3];
