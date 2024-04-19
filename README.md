@@ -1,6 +1,6 @@
 # ChatApp
 
-ChatApp is a chat application built with Next.js. The application allows users to send and receive messages. Each user has a unique profile, including a name, avatar and classifies as either a doctor or patient.
+ChatApp is a chat application built with Next.js. The application allows users to send and receive messages. Each user has a unique profile, including a name, avatar and classifies as either a doctor or patient. This application was created in roughly ~11 hours.
 
 ## Tech Stack and Dependencies
 
