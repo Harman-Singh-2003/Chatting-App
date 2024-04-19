@@ -14,7 +14,7 @@ The application also uses various other dependencies, which can be found in the 
 
 ## Live Demo
 
-The application is hosted on Vercel and can be accessed at [https://chatting-app-ruddy.vercel.app/](https://chatting-app-ruddy.vercel.app)
+The application is hosted on Vercel and can be accessed at [https://chatting-app-ruddy.vercel.app](https://chatting-app-ruddy.vercel.app)
 
 ## Getting Started
 
