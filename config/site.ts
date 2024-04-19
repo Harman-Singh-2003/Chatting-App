@@ -1,5 +1,25 @@
 //Mock data for the site
 
+{/*
+clientUser: This object represents the client user of the messaging system. 
+Currently, it only has a type property which is an empty string. 
+This could potentially be used to store the type of user (e.g., admin, regular user, guest, etc.).
+
+users: This is an array of user objects. Each user object has the following properties:
+	id: A unique identifier for the user.
+	name: The name of the user.
+	avatar: A URL to the user's avatar image.
+	occupation: The occupation of the user.
+	messages: An array of message objects. Each message object has the following properties:
+		id: A unique identifier for the message.
+		content: The content of the message.
+		timestamp: The time the message was sent or received.
+		type: The type of message, which can be "received" or "sent".
+
+This data model allows for each user to have multiple messages, and each message is associated with a specific user. 
+The type property in the message object allows for distinguishing between sent and received messages.
+*/}
+
 export const clientUser = {
 	type: "",
 }

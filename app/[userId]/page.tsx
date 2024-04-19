@@ -1,35 +1,43 @@
 'use client';
 
 import React from "react";
-import { Textarea, Card, ScrollShadow, User } from "@nextui-org/react";
+import { Textarea,  ScrollShadow } from "@nextui-org/react";
 import { title } from "@/components/primitives";
 import { users } from "@/config/site";
 import { MessageCard } from "@/components/messageCard";
 
 export default function userPage({ params }: { params: { userId: string } }) {
+  // Find the user based on the userId parameter
   const user = users.find((user) => user.id == Number(params.userId));
 
+  // Get the user's name or set it to an empty string if the user is not found
   const userName = user?.name ?? "";
 
+  // Create a list of message cards for the user's messages
   const messageList = user?.messages?.map((message) => (
     <MessageCard message={message} userName={userName} userAvatar={user?.avatar} />
   ));
 
+  // State for the input value of the textarea
   const [value, setValue] = React.useState("");
 
+  // Function to send a message
   const sendMessage = (content: string) => {
+    // Create a new message object
     const message = {
       id: (user?.messages?.length || 0) + 1,
       content: content,
       timestamp: new Date(),
       type: "sent",
     };
+    // Add the message to the user's messages array
     user?.messages?.push(message);
   };
 
   return (
     <div className="flex flex-col h-full p-1" style={{ height: "95vh" }}>
       <div>
+        {/* Display the user's name */}
         <h1 className={`${title()} border-b border-gray-300`}>{userName}</h1>
       </div>
       <ScrollShadow
@@ -52,6 +60,7 @@ export default function userPage({ params }: { params: { userId: string } }) {
             if (event.key === "Enter") {
               event.preventDefault();
               if (value) {
+                // Call the sendMessage function when Enter key is pressed
                 sendMessage(value);
                 setValue("");
                 (event.target as HTMLInputElement).blur();

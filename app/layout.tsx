@@ -2,7 +2,6 @@
 
 import React from "react";
 import {
-  User,
   Modal,
   ModalContent,
   ModalHeader,
@@ -10,7 +9,6 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Card,
 } from "@nextui-org/react";
 import "@/styles/globals.css";
 import { users, shownUsers } from "@/config/site";
@@ -39,10 +37,12 @@ export default function RootLayout({
     onOpenChange: handleEntryOpenChange,
   } = useDisclosure();
 
+  // Filter users based on shownUsers and clientUser type
   const visibleUsers = users.filter((user) => {
     return shownUsers.includes(user.id) && user.occupation != clientUser.type;
   });
 
+  // Function to handle adding a user
   const handleAddUser = (userId: number) => {
     shownUsers.push(userId);
     visibleUsers.push(
@@ -61,6 +61,7 @@ export default function RootLayout({
     );
   };
 
+  // Default user to add
   const addUser = {
     id: null,
     name:
@@ -74,6 +75,7 @@ export default function RootLayout({
     occupation: "",
   };
 
+  // Function to handle client user selection
   const handleUserSelection = (type: string) => {
     clientUser.type = type;
     console.log(clientUser.type);
