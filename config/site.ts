@@ -1,9 +1,15 @@
+//Mock data for the site
+
+export const clientUser = {
+	type: "",
+}
+
 export const users = [
 	{
-		id: 0,
+		id: 1,
 		name: "John Doe",
-		avatar: "https://example.com/avatar1.jpg",
-		occupation: "doctor",
+		avatar: "https://t4.ftcdn.net/jpg/02/19/63/31/360_F_219633151_BW6TD8D1EA9OqZu4JgdmeJGg4JBaiAHj.jpg",
+		occupation: "Doctor",
 		messages: [
 			{
 				id: 1,
@@ -26,10 +32,10 @@ export const users = [
 		],
 	},
 	{
-		id: 1,
+		id: 2,
 		name: "Jane Smith",
-		avatar: "https://example.com/avatar2.jpg",
-		occupation: "patient",
+		avatar: "https://media.istockphoto.com/id/1089633230/photo/glasses-girl-in-white.jpg?s=612x612&w=0&k=20&c=qtq-7I75UA_ViQdi0GWbaGnLUYjHIRBJE3ry1v5T-TA=",
+		occupation: "Patient",
 		messages: [
 			{
 				id: 1,
@@ -52,10 +58,10 @@ export const users = [
 		],
 	},
 	{
-		id: 2,
+		id: 3,
 		name: "Mike Johnson",
-		avatar: "https://example.com/avatar3.jpg",
-		occupation: "doctor",
+		avatar: "https://media.istockphoto.com/id/1286810719/photo/smiling-cheerful-young-adult-african-american-ethnicity-man-looking-at-camera-standing-at.jpg?s=612x612&w=0&k=20&c=b9sWYITIZ_yjXB3m-Xftj-latPXQDhb5Roa0pA0JaNY=",
+		occupation: "Doctor",
 		messages: [
 			{
 				id: 1,
@@ -78,10 +84,10 @@ export const users = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		name: "Sarah Johnson",
-		avatar: "https://example.com/avatar4.jpg",
-		occupation: "patient",
+		avatar: "https://media.istockphoto.com/id/1001379278/photo/portrait-of-friendly-afro-amercian-businesswoman.jpg?s=612x612&w=0&k=20&c=wYShnfP72eVgMNUSqjmzOOrBKnipkQXnIqeHNt780fs=",
+		occupation: "Patient",
 		messages: [
 			{
 				id: 1,
@@ -104,47 +110,47 @@ export const users = [
 		],
 	},
 	{
-		id: 4,
-		name: "David Johnson",
-		avatar: "https://example.com/avatar5.jpg",
-		occupation: "doctor",
-		messages: [],
-	},
-	{
 		id: 5,
-		name: "Emily Smith",
-		avatar: "https://example.com/avatar6.jpg",
-		occupation: "doctor",
+		name: "David Johnson",
+		avatar: "https://media.istockphoto.com/id/157506992/photo/portrait-of-hispanic-mid-adult-man-wearing-lab-coat.jpg?s=612x612&w=0&k=20&c=h7Da7s1j-qHCfDSsU7LnIcJEVDjWSVUsjkpo3BZfJkA=",
+		occupation: "Doctor",
 		messages: [],
 	},
 	{
 		id: 6,
-		name: "Michael Brown",
-		avatar: "https://example.com/avatar7.jpg",
-		occupation: "doctor",
+		name: "Emily Smith",
+		avatar: "https://wallisphoto.com/wp/wp-content/uploads/2023/03/Dr-BR-031-819x1024.jpg",
+		occupation: "Doctor",
 		messages: [],
 	},
 	{
 		id: 7,
-		name: "Jessica Davis",
-		avatar: "https://example.com/avatar8.jpg",
-		occupation: "patient",
+		name: "Michael Brown",
+		avatar: "https://wallisphoto.com/wp/wp-content/uploads/2023/03/DrKim-006.jpg",
+		occupation: "Doctor",
 		messages: [],
 	},
 	{
 		id: 8,
-		name: "Daniel Wilson",
-		avatar: "https://example.com/avatar9.jpg",
-		occupation: "patient",
+		name: "Jessica Davis",
+		avatar: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?cs=srgb&dl=pexels-olly-762020.jpg&fm=jpg",
+		occupation: "Patient",
 		messages: [],
 	},
 	{
 		id: 9,
+		name: "Daniel Wilson",
+		avatar: "https://freerangestock.com/sample/149089/headshot-smiling-asian-executive.jpg",
+		occupation: "Patient",
+		messages: [],
+	},
+	{
+		id: 10,
 		name: "Olivia Johnson",
-		avatar: "https://example.com/avatar10.jpg",
-		occupation: "patient",
+		avatar: "https://images.pexels.com/photos/3786525/pexels-photo-3786525.jpeg?cs=srgb&dl=pexels-olly-3786525.jpg&fm=jpg",
+		occupation: "Patient",
 		messages: [],
 	},
 ];
 
-export const shownUsers:number[] = [0,1,2,3];
+export const shownUsers:number[] = [1, 2, 3, 4];
