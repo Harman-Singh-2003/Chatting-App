@@ -1,12 +1,12 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import { Textarea,  ScrollShadow } from "@nextui-org/react";
 import { title } from "@/components/primitives";
 import { users } from "@/config/site";
 import { MessageCard } from "@/components/messageCard";
 
-export default function userPage({ params }: { params: { userId: string } }) {
+export default function UserPage({ params }: { params: { userId: string } }) {
   // Find the user based on the userId parameter
   const user = users.find((user) => user.id == Number(params.userId));
 
@@ -15,11 +15,11 @@ export default function userPage({ params }: { params: { userId: string } }) {
 
   // Create a list of message cards for the user's messages
   const messageList = user?.messages?.map((message) => (
-    <MessageCard message={message} userName={userName} userAvatar={user?.avatar} />
+    <MessageCard key={message.id} message={message} userName={userName} userAvatar={user?.avatar} />
   ));
 
   // State for the input value of the textarea
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = useState("");
 
   // Function to send a message
   const sendMessage = (content: string) => {
