@@ -17,6 +17,7 @@ import { users, shownUsers } from "@/config/site";
 import { Providers } from "./providers";
 import { useRouter } from "next/navigation";
 import { clientUser } from "@/config/site";
+import { UserCard } from "@/components/userCard";
 
 export default function RootLayout({
   children,
@@ -41,41 +42,6 @@ export default function RootLayout({
   const visibleUsers = users.filter((user) => {
     return shownUsers.includes(user.id) && user.occupation != clientUser.type;
   });
-
-  //User component
-  const userCard = ({
-    user,
-    onCustomClick,
-  }: {
-    user: {
-      id: number | null;
-      name: string;
-      avatar: string;
-      occupation: string;
-    };
-    onCustomClick?: () => void;
-  }) => (
-    <Card
-      className="p-2 w-full"
-      isPressable={true}
-      isHoverable={true}
-      onPress={
-        onCustomClick
-          ? onCustomClick
-          : () => {
-              user?.id && router.push(`/${user.id}`);
-              console.log(user.id);
-            }
-      }
-    >
-      <User
-        name={user.name}
-        avatarProps={{ src: user?.avatar }}
-        description={user.occupation}
-        className="w-full justify-start"
-      />
-    </Card>
-  );
 
   const handleAddUser = (userId: number) => {
     shownUsers.push(userId);
@@ -119,7 +85,7 @@ export default function RootLayout({
       <body>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-row h-screen">
-            <aside className="w-1/4 bg-cyan-800 p-4 max-w-sm min-w-48">
+            <aside className="w-1/4 bg-teal-800 p-4 max-w-sm min-w-48">
               <h2 className="text-lg font-semibold mb-4 text-white font-bold justify-self-center align-items-center">
                 {clientUser.type === ""
                   ? ". . ."
@@ -131,11 +97,11 @@ export default function RootLayout({
                 {clientUser.type &&
                   visibleUsers.map((user) => (
                     <li className="text-gray-700" key={user.id}>
-                      {userCard({ user })}
+                      <UserCard user={user} />
                     </li>
                   ))}
                 <li className="text-gray-700">
-                  {userCard({ user: addUser, onCustomClick: openModal })}
+                  <UserCard user={addUser} onCustomClick={openModal} />
                 </li>
               </ul>
             </aside>
@@ -163,13 +129,13 @@ export default function RootLayout({
                             })
                             .map((user) => (
                               <li className="text-gray-700" key={user.id}>
-                                {userCard({
-                                  user,
-                                  onCustomClick: () => {
+                                <UserCard
+                                  user={user}
+                                  onCustomClick={() => {
                                     handleAddUser(user.id);
                                     onClose();
-                                  },
-                                })}
+                                  }}
+                                />
                               </li>
                             ))}
                         </ul>

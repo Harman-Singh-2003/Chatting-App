@@ -4,45 +4,15 @@ import React from "react";
 import { Textarea, Card, ScrollShadow, User } from "@nextui-org/react";
 import { title } from "@/components/primitives";
 import { users } from "@/config/site";
+import { MessageCard } from "@/components/messageCard";
 
 export default function userPage({ params }: { params: { userId: string } }) {
   const user = users.find((user) => user.id == Number(params.userId));
 
-  const userName = user?.name;
-  const MessageCard = ({
-    message,
-  }: {
-    message: { id: number; content: string; timestamp: Date; type: string };
-  }) => (
-    <Card className="my-4 flex flex-row p-3">
-      {
-        <User
-          name={
-            <div className="flex flex-row items-center">
-              <p className="text-black text-m font-semibold">
-                {message.type === "received" ? userName : "You"}
-              </p>{" "}
-              <p className="ml-4 text-xs">
-                {message.timestamp.toLocaleDateString()}
-              </p>
-            </div>
-          }
-          avatarProps={{
-            src: message.type === "received" ? user?.avatar : undefined,
-          }}
-          description={
-            <div className="text-left align">
-              <p className="text-lg text-black">{message.content}</p>
-              <p className="text-xs text-gray-500"></p>
-            </div>
-          }
-        />
-      }
-    </Card>
-  );
+  const userName = user?.name ?? "";
 
   const messageList = user?.messages?.map((message) => (
-    <MessageCard message={message} />
+    <MessageCard message={message} userName={userName} userAvatar={user?.avatar} />
   ));
 
   const [value, setValue] = React.useState("");
