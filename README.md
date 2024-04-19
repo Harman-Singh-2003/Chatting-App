@@ -16,15 +16,29 @@ The application also uses various other dependencies, which can be found in the 
 
 The application is hosted on Vercel and can be accessed at [https://chatting-app-ruddy.vercel.app/](https://chatting-app-ruddy.vercel.app/)
 
+## Getting Started
+
+To get started with the project, you first need to clone the repository. Run the following command in your terminal:
+
+```bash
+git clone https://github.com/Harman-Singh-2003/Chatting-App.git
+```
+
+Then, navigate into the project directory:
+```bash
+cd Chatting-App
+```
+
 ## Installation
 
-### Install NVM (Node Version Manager)
+### Install NVM (Node Version Manager) (Linux or Mac)
 
 To install NVM, run the following command in your terminal:
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
+If you are having issues installing NVM, refer to the official docs [here](https://nodejs.org/en/download/package-manager) 
 
 ## Setup and Installation
 
@@ -46,15 +60,7 @@ Follow these steps to set up and run the project:
     corepack enable
     ```
 
-3. **Initialize the project**
-
-    Use Yarn to initialize the project:
-
-    ```bash
-    yarn init -2
-    ```
-
-4. **Switch to the installed Node.js version**
+3. **Switch to the installed Node.js version**
 
     Use nvm to switch to the installed Node.js version:
 
@@ -62,7 +68,7 @@ Follow these steps to set up and run the project:
     nvm use
     ```
 
-5. **Install dependencies**
+4. **Install dependencies**
 
     Use Yarn to install the project dependencies:
 
@@ -70,9 +76,9 @@ Follow these steps to set up and run the project:
     yarn install
     ```
 
-6. **Build and run the project**
+5. **Build and run the project**
 
-    For development build, use the following command:
+    For development build, use the following command and wait until:
 
     ```bash
     yarn run dev
