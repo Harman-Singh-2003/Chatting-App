@@ -33,7 +33,7 @@ export const users = [
 		messages: [
 			{
 				id: 1,
-				content: "Hello, world!",
+				content: "Hello!",
 				timestamp: new Date("2024-04-11T09:30:00"),
 				type: "received",
 			},
@@ -95,12 +95,6 @@ export const users = [
 				timestamp: new Date("2024-04-17T12:55:00"),
 				type: "received",
 			},
-			{
-				id: 3,
-				content: "I'm doing great!",
-				timestamp: new Date("2024-04-17T16:30:00"),
-				type: "received",
-			},
 		],
 	},
 	{
@@ -111,7 +105,7 @@ export const users = [
 		messages: [
 			{
 				id: 1,
-				content: "Hi, everyone!",
+				content: "Hi!",
 				timestamp: new Date("2024-04-18T09:00:00"),
 				type: "received",
 			},

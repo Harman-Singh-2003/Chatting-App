@@ -78,7 +78,9 @@ Follow these steps to set up and run the project:
 
 5. **Build and run the project**
 
-    For development build, use the following command and wait until:
+    For development build, the project will compile when you visit the site for the first time. So when the project has been setup, visit [http://localhost:3000](http://localhost:3000), let it compile for ~10 seconds, and refresh the page to retreive all compiled files. 
+    
+    To run the development build, use the following command:
 
     ```bash
     yarn run dev
