@@ -26,7 +26,6 @@ export const UserCard = ({
           ? onCustomClick
           : () => {
               user?.id && router.push(`/${user.id}`);
-              console.log(user.id);
             }
       }
     >

@@ -78,7 +78,6 @@ export default function RootLayout({
   // Function to handle client user selection
   const handleUserSelection = (type: string) => {
     clientUser.type = type;
-    console.log(clientUser.type);
   };
 
   return (
